@@ -1,6 +1,7 @@
 import restaurantData
 
-
+# I figure the best data structure choices where to use a class for the restaurants and a list comprehension to create a list of restaurants,
+# or create a dictionary of the resturants since both choices would allow the sorting goal I wanted. 
 class Restaurant:
     def __init__(self, type, name, price, rating, address):
         self.type = type
@@ -71,6 +72,7 @@ while run:
         else:
             print(
                 f"\nHere are the available types of food that match your search: {l_search}.\n")
+    # Thought it would be nice to sort the results, this is by no means necessary and increases the runtime of the program from O(n) to O(nlogn) using the built in sort function. 
     sort_choice = input(
         "\nWould you like to sort by (p)rice, (r)ating, or (n)ame?\n> ")
     if sort_choice.lower() == 'p' or sort_choice.lower() == 'price':
